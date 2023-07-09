@@ -1,0 +1,380 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styling for the page */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+}
+
+ .mobile-container {
+  height: auto;
+  padding: 15px;
+  margin: auto;
+  background-color:white;
+  color: white;
+  border-radius: 10px;
+} 
+
+/* .mobile-container {
+  background-color: #fff;
+  color: royalblue;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+} */
+
+/* .topnav {
+  overflow: hidden;
+  background-color:white;
+  position: relative;
+}  */
+
+.topnav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+#myLinks {
+  list-style: none;
+  display: flex;
+  margin-right: 10px;
+  padding:5px;
+}
+
+#myLinks a {
+  color: royalblue;
+  text-decoration: none;
+ padding-right: 15px;
+ font-size:20px;
+ padding-left: 20px;
+
+}
+
+#myLinks a:hover {
+  background-color: whitesmoke;
+  font-size:30px;
+}
+
+.topnav a.icon {
+  display:none;
+}
+
+
+
+/* logo css */
+.logoa img {
+  padding:8px;
+  background-color: white;
+  height: 80px; 
+  width: auto;
+}
+
+/* Dropdown menu styles */
+
+/* Dropdown menu styles */
+
+
+
+
+
+
+
+
+/* .submenu {
+  display: none;
+ 
+  
+  position: absolute;
+  background-color: #fff;
+  padding: 5px;
+} */
+
+
+
+
+/* .submenu li {
+  margin-bottom: 5px;
+} */
+
+/* .submenu li a {
+  color: royalblue;
+  text-decoration: none;
+} */
+
+/* new dropmenu css */
+
+/* dropdown menu end */
+
+
+
+/* main-image css */
+.carousel {
+  position: relative;
+  width:100%;
+  height:440px;
+  padding-left:2px;
+  overflow: visible;
+}
+
+.carousel-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carousel-item .content {
+  width:30%;
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  padding-left:2px;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 20px;
+  text-align: left;
+}
+
+.carousel-item.active {
+  display: block;
+}
+
+.carousel-controls {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.carousel-controls button {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  margin: 0 5px;
+  background-color: #aaa;
+  cursor: pointer;
+}
+
+.carousel-controls button.active {
+  background-color: #333;
+}
+
+/* patti */
+.patti{
+  background:white;
+  width: 100%;
+  height:100px;
+}
+
+/* why choos us css start */
+
+.why-choose-us-container {
+  background:white;
+  max-width:100%;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.why-choose-us-container h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color:royalblue;
+}
+
+.why-choose-us-container p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #555;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+.feature {
+  flex-basis: calc(50% - 20px);
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feature h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color:royalblue;
+}
+
+.feature p {
+  margin-bottom: 0;
+}
+
+/* why chosse us css end */
+
+
+/* about us start */
+.About-Us-container {
+  background-image: url("abg.JPG");
+  background-position: center;
+  /* background:white; */
+  max-width:100%;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+.About-Us-container h1 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color:royalblue;
+}
+
+.About-Us-container p {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color:white;
+}
+
+.experience {
+ 
+
+  padding: 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+
+.experience h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color:royalblue;
+}
+
+
+/* about us end */
+
+
+@media (max-width: 768px) {
+
+
+
+.topnav {
+  overflow: hidden;
+  background-color:white;
+  position: relative;
+} 
+
+/* .topnav {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+
+.topnav #myLinks {
+  display: none;
+}
+
+.topnav a {
+  color: royalblue;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav a.icon {
+  color: royalblue;
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+  /* logo css */
+  .logoa img {
+    padding:4px;
+    background-color: white;
+    height: 50px; 
+    width: auto;
+  }
+
+  /* carousel text */
+  /* main-image css */
+.carousel {
+  position: relative;
+  width:100%;
+  height:550px;
+  padding-left:2px;
+  overflow: visible;
+}
+  .carousel-item .content {
+    width:30%;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    padding-left:2px;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  .footer{
+    background-color: #1c2431;
+}
+.footer h4{
+    color: red;
+    font-size: 25px;
+}
+.footer p,a{
+    color: white;
+}
+#footer-icons a{
+    font-size: 30px;
+    padding: 10px;
+    color: white;
+}
+}

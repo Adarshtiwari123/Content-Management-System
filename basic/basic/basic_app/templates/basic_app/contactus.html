@@ -1,0 +1,290 @@
+{% load  static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .form_main {
+  height: 500px;
+            width: 520px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  padding: 30px 30px 30px 30px;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.062);
+  position: relative;
+  overflow: hidden;
+}
+
+.form_main::before {
+  position: absolute;
+  content: "";
+  width: 300px;
+  height: 300px;
+  background-color: rgb(209, 193, 255);
+  transform: rotate(45deg);
+  left: -180px;
+  bottom: 30px;
+  z-index: 1;
+  border-radius: 30px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.082);
+}
+
+.heading {
+  font-size: 2em;
+  color: #2e2e2e;
+  font-weight: 700;
+  margin: 5px 0 10px 0;
+  z-index: 2;
+}
+
+.inputContainer {
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 3px;
+}
+
+.inputField {
+  width: 100%;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(173, 173, 173);
+  margin: 10px 0;
+  color: black;
+  font-size: .8em;
+  font-weight: 500;
+  box-sizing: border-box;
+  padding-left: 30px;
+}
+
+.inputField:focus {
+  outline: none;
+  border-bottom: 2px solid rgb(199, 114, 255);
+}
+
+.inputField::placeholder {
+  color: rgb(80, 80, 80);
+  font-size: 1em;
+  font-weight: 500;
+}
+
+#button {
+  z-index: 2;
+  position: relative;
+  width: 100%;
+  border: none;
+  background-color: rgb(162, 104, 255);
+  height: 30px;
+  color: white;
+  font-size: .8em;
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+#button:hover {
+  background-color: rgb(126, 84, 255);
+}
+
+.forgotLink {
+  z-index: 2;
+  font-size: .7em;
+  font-weight: 500;
+  color: rgb(44, 24, 128);
+  text-decoration: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+#main
+{
+    height:450;
+    
+}
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="/static/js/bootstrap.min.js">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Home </title>  
+</head>
+<body>
+    <!-- navigation starts here -->
+    <div id="myNavbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>                
+            </div>
+            <div class="navbar-collapse collapse">
+                <div>
+                    <a href="#" ><img  src="/static/img/XpertBizz.png" height="120px" width="250px" alt=""></a>                  
+                    <ul class="navbar-nav ms-auto">
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'basic_app:view_index' %}"><i class="bi bi-house-fill me-1"></i>Home</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'basic_app:view_aboutus' %}"><i class="bi bi-info-circle-fill me-1"></i>About</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="#contact"><i class="bi bi-envelope-fill me-1"></i>Contact</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'basic_app:view_adminlogin' %}"><i class="bi bi-person-fill me-1"></i>Login</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" href="{% url 'basic_app:view_blog' %}"><i class="bi bi-journal-text-fill me-1"></i>Blog</a>
+                      </li>
+                    </ul>
+                </div>
+            </div>
+        </div>      
+    </div>
+    <!-- navigation ends here -->
+    <!-- header starts here -->
+    <div id="header" class="header" style="background-image: url(/static/img/m.jpg); padding-top: 150px;" >
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 w3-container w3-center w3-animate-left">
+                   <!-- <h1 id="c_header" style="font-family: Garamond, serif;"><b><u> WELCOME TO XpertBIZZ</u></b></h1>-->
+                   <!--- <p style="text-align: center;"><i class="fa fa-spinner w3-spin" style="font-size:64px;
+                                color:navy;"></i><i class="fa fa-spinner w3-spin" style="font-size:64px;
+                                color:white;"></i><i class="fa fa-spinner w3-spin" style="font-size:64px;
+                                color:red;"></i></p>-->
+                    
+                    <marquee id="header_marq" style="color: yellow; font-size: 25px;" behavior="" onmouseover="stop()" onmouseout="start()" direction="left"
+                        scrollamount="8">With 20+ Years of experience working in Information Technology Industry. Our firm has earned a reputation of getting the job done as promised.
+                    </marquee>
+                </div>             
+            </div>
+        </div>
+    </div>
+    <!-- header ends here -->
+
+
+
+
+    <!-- main section starts here -->
+    <h1 style="color:grey;text-align: center;color:rgb(26, 162, 224)">Get In Touch</h1><br>
+    <p class="heading" style="color:grey;font-size:35px;text-align:center; ">Want to get in touch? We'd love to hear from you.</p><br> 
+    <!-- <div id="main" class="main" style="background-image:url(/static/img/.jpg)">
+        <!-- <div class="container" style="background-color: grey;"> -->
+                <form action="" class="form_main" style="width:70%;margin:0px auto;min-height: 500px;border:1px solid blueviolet"> 
+                  <h4 style="text-align:center;word-spacing: 3px;color:aqua"> Here's how you can reach us..</h4>   
+                    <br><br>
+                <div class="inputContainer">
+                    
+                    <input type="text" class="inputField" id="name" placeholder="Name">
+                </div>
+                    <div class="inputContainer">
+                <input type="email" class="inputField" id="username" placeholder="Email">
+                    </div>
+                    
+                <div class="inputContainer">
+        <textarea name="" id="" cols="30" class="inputField" placeholder="write comment" rows="10"></textarea>            
+                   
+                </div>
+                              
+                           <br><br><br>
+                <button id="button">Submit</button>
+                   
+                </form>
+                
+                <!---<form class="form" method="POST" action="{% url 'basic_app:enqueryform' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="">Name</label>
+                        <input type="text" class="form-control" name="username" id="" placeholder="Enter Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Phone</label>
+                        <input type="number" class="form-control" id="" name="phonenumber" placeholder="Enter Your Number">
+                    </div>
+                    <div class="form-group"> 
+                      <label for="">Email address</label>
+                      <input type="email" class="form-control" id="" name="useremail" placeholder="name@gmail.com">
+                    </div>
+                    <div class="form-group">
+                      <label for="">Select Course</label>
+                      <select class="form-control" id="" name="course">
+                        <option value="none" selected disabled hidden>Courses</option>
+                        <option>Python</option>
+                        <option>Java</option>
+                        <option>Machine Learning</option>
+                        <option>Full Stack</option>
+                        <option>C#</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Message</label>
+                      <textarea class="form-control" name="message" id="" rows="3"></textarea>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-success btn-lg">Submit</button>
+                    </div>
+                  </form>--->
+            <!-- </div>  
+             -->
+        <!-- </div> -->
+    </div> <br>
+    
+    <!-- footer section starts here -->
+    <div id="footer" class="footer" style="background-image: url(/static/img/wav.jpg);">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4  col-md-4">
+                    <h4  style="color:rgb(33, 174, 218)"><b>Contact Us</b></h4>
+                    <!-- <br> -->
+                    <p><i class="fa-solid fa-address-book"></i>  ABCD Adress</p>
+                    <p><i class="fas fa-envelope"></i>  abc@gmail.com</p>
+                    <p><i class="fas fa-phone"></i>  9876543221</p>
+                </div>
+                <div class="col-lg-4  col-md-4">
+                    <h4 style="color:rgb(33, 174, 218)"><b>Useful Links</b></h4>
+                    <!-- <br> -->
+                    <p><a href="index.html">Home</a></p>
+                    <p><a href="about.html">About Us</a></p>
+                    <p><a href="#services">Services</a></p>
+                    <p><a href="#blog">Blog</a></p>
+                </div>
+                <div class="col-lg-4  col-md-4" id="footer-icons">
+                    <h4 style="color:rgb(33, 174, 218)"><b>Connect With Us</b></h4>
+                    <!-- <br> -->
+                    <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="#"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.js"></script>
+</body>
+</html>
+ 
